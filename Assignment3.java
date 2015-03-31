@@ -41,7 +41,13 @@ public class Assignment3 {
 				if (trial == limit){
 			JOptionPane.showMessageDialog(null,"Contact Administrator");
 			System.exit(0);
-			}	
+			}
+			prompt = (String) JOptionPane.showInputDialog(null, "Choose account type...","Account Type",JOptionPane.QUESTION_MESSAGE, null,choices,choices[1]);		
+			while(prompt.compareTo(input)!=0){
+				JOptionPane.showMessageDialog(null, "wrong account type" );
+								
+			prompt = (String) JOptionPane.showInputDialog(null, "Choose account type...","Account Type",JOptionPane.QUESTION_MESSAGE, null,choices,choices[1]);
+
 			switch (input){
 			case "Admin":
 				JOptionPane.showMessageDialog(null, "Welcome Admin! You can update and read file.");
